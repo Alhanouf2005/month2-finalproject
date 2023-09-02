@@ -1,0 +1,1 @@
+const expertcards= document.getElementsByClassName(expertscard)
