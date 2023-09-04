@@ -1,21 +1,74 @@
 /****************************************************/
 /* experts card styling */
-.expertscard{
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body{
+    background-color: rgb(29, 29, 50);
+}
+
+#experts-cards-container{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+
+    
+}
+
+#experts-cards-container2{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+   
+    
+}
+
+#contentcard{
     border: 1px solid;
-    border-radius: 5px;
-    width: 400px;
+    width: 300px;
+    height: 350px;
+    padding: 35px;
+    border-radius: 10px;
+    transition: .2s;
+    background-color: rgb(227, 226, 226);
 }
-.first{
-    display: flex;
-    list-style: none;
+#contentcard:hover{
+    transform: scale(1.06);
 }
-.second{
-    display: flex;
-    list-style: none;
+.img{
+    width: 140px;
+    margin-right: 85px;
 }
-.knowMore{
-    border: 1px solid;
-    margin-right: 250px;
+
+.name{
+    margin-top: 15px;
+    text-align: center;
+}
+.experties{
+    font-size: 25px;
     margin-bottom: 10px;
-    padding: 10px;    
+}
+.expertieslist{
+    margin-bottom: 10px;
+}
+.knowmore{
+    text-decoration: none;
+    margin-right: 120px;
+    background-color: grey;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.buttondown{
+    display: flex;
+    justify-content: center;
+}
+button{
+  
+    border-radius: 50%;
+    padding: 10px;
 }
