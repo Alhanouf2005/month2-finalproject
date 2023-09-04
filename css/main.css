@@ -11,11 +11,14 @@ body {
 
         /* Header styles */
         .header {
-            background-color: #333;
+         
             color: #fff;
             text-align: center;
             padding: 20px 0;
             height: 90vh;
+            background-image: url(../img/photo_6030879935175966092_x.jpg);
+           
+
         }
 
         .logo {
