@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-const addbutton =document.getElementsByClassName(addbutton);
+const addbutton =document.getElementsByClassName(loadMorebtn);
 addbutton.addEventListener("click",function(){
     
         // this element is a div created at the HTML file
