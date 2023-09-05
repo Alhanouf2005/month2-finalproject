@@ -10,25 +10,25 @@
 body {
           /* font-family: 'Marhey', cursive; */
           font-family: 'Roboto', sans-serif;
-          background-color: #170633;
+         background-color: #290A5B;
 
         }
 
         /* Header styles */
         .header {
-         
+          background-color: #13032d;
             color: #fff;
             text-align: center;
             padding: 20px 0;
             height: 90vh;
-            /* background-image: url(../img/photo_6030879935175966092_x.jpg); */
-            /* background-repeat: no-repeat;
-            background-size: cover; */
+            background-image: url(../img/photo_6030879935175966092_x.jpg);
+             /* background-repeat: no-repeat;
+            background-size: cover;  */
         }
 
         .logo {
            /* border: 2px solid rgb(16, 16, 66); */
-           width: 120px;
+           
            
         }
 
@@ -47,14 +47,22 @@ body {
          } */
 
         .login-button {
-            border-radius: 10px;
+            border-radius: 15px;
             width: 6rem;
+            padding: 3px;
+            font-size: 15px;
             margin-left: 50px;
+            height: 44px;
+
         }
+        
+        .login-button:hover{
+          background-color:#534962 ;
+        } 
 
         .header-text {
-            font-size: 50px;
-            margin-top: 6rem;
+            font-size: 80px;
+            margin-top: 10rem;
             /* border: 2px green solid; */
             width: 50%;
             text-align: right;
@@ -62,7 +70,7 @@ body {
         }
 
         .sub-heading-text{
-          font-size: 34px;
+          font-size: 54px;
           /* border: 2px yellow dotted; */
           width: 50%;
           text-align: right;
@@ -89,6 +97,7 @@ body {
           width: 670px;
           display: flex;
           justify-content: space-around;
+          font-size: 28px;
           
         }
        
@@ -105,16 +114,19 @@ body {
         }
         
         .start-button{
-          height: 3rem;
-          width :7rem;
+          height: 4rem;
+          width :8rem;
           border-radius: 20px;
-          background-color: rgb(6, 1, 6);
+          background-color: #534962;
           color: #fff;
+          font-size: 1.2rem;
          
         }
-        /* .start-button:hover{
-          background-color: rgb(139, 60, 139);
-        } */
+        .start-button:hover{
+          transform:scale(1.060);
+          transition: .3s;
+
+        }
 
 
         /* About us section styles */
@@ -127,7 +139,7 @@ body {
             /* border: blue solid 2px; */
             align-items: center;
             padding: 20px;
-            color: white;
+           
         }
         .vision #vision-heading{
           font-size: 40px;
@@ -151,7 +163,7 @@ body {
         .services-card-container {
             display: flex;
             justify-content: space-around;
-            padding: 20px;
+            padding: 30px;
             /* border: red 2px solid; */
         }
 
@@ -160,8 +172,8 @@ body {
             padding: 20px;
             margin: 0 10px;
             text-align: center;
-            height: 130px;
-            width: 130px;
+            height: 180px;
+            width: 180px;
         }
 
         /* User feedback section styles */
