@@ -2,11 +2,15 @@
             *{
           margin: 0;
           padding: 0;
-          font-family: 'Marhey', cursive;
+          /* font-family: 'Marhey', cursive; */
+          font-family: 'Roboto', sans-serif;
+
 
           }
 body {
-          font-family: 'Marhey', cursive;
+          /* font-family: 'Marhey', cursive; */
+          font-family: 'Roboto', sans-serif;
+
         }
 
         /* Header styles */
@@ -17,12 +21,12 @@ body {
             padding: 20px 0;
             height: 90vh;
             background-image: url(../img/photo_6030879935175966092_x.jpg);
-           
-
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .logo {
-           border: 2px solid darkblue;
+           /* border: 2px solid rgb(16, 16, 66); */
            width: 120px;
            
         }
@@ -31,9 +35,15 @@ body {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
-            border: red dotted 2px;
+            /* border: red dotted 2px; */
             width: 190px;
+         
         }
+
+        a:hover{
+          background-color: aqua;
+          color: aquamarine;
+         }
 
         .login-button {
             border-radius: 10px;
@@ -44,7 +54,7 @@ body {
         .header-text {
             font-size: 50px;
             margin-top: 6rem;
-            border: 2px green solid;
+            /* border: 2px green solid; */
             width: 50%;
             text-align: right;
             padding-right: 50px;
@@ -52,7 +62,7 @@ body {
 
         .sub-heading-text{
           font-size: 34px;
-          border: 2px yellow dotted;
+          /* border: 2px yellow dotted; */
           width: 50%;
           text-align: right;
           padding-right: 58px;
@@ -66,37 +76,44 @@ body {
         }
 
         nav{
-          border: 2px blue solid;
+          /* border: 2px blue solid; */
           display: flex;
           justify-content: space-between;
+
         }
+       
         .links{
-          border: 2px red solid;
+     
           margin-right: 140px;
           width: 670px;
           display: flex;
           justify-content: space-around;
           
         }
+       
 
         nav button{
-          border: yellow 2px dotted;
+          /* border: yellow 2px dotted; */
           margin-right: 150px;
         }
         .startbutton-container{
-          border: 2px salmon solid;
+          /* border: 2px salmon solid; */
           margin-top: 30px;
           display: flex;
           padding-right: 7rem;
         }
+        
         .start-button{
           height: 3rem;
           width :7rem;
           border-radius: 20px;
+          background-color: rgb(96, 30, 96);
+          color: #fff;
          
         }
-
-
+        .start-button:hover{
+          background-color: rgb(139, 60, 139);
+        }
 
 
         /* About us section styles */
