@@ -1,99 +1,82 @@
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// saving data in an array at the local storage
-document.addEventListener("DOMContentLoaded", function () {
-    const expertscards = JSON.parse(localStorage.getItem("arr")) || [
-        {
-            id: 0,
-            title: "فرح حميدي",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
-            
-        },
-        {
-            id: 1,
-            title: "لمى الداود",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
-            
-        },
-        {
-            id: 0,
-            title: "جمانة العشيوان",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
-            
-        },
-        {
-            id: 1,
-            title: "الهنوف العريني",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
-        },
-        {
-            id: 0,
-            title: "سماح النجدي",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
-            
-        },
-        {
-            id: 1,
-            title: "علي ابراهيم",
-            imgurl: "../media/userimg2.png",
-            head: "الخبرات",
-            description1:"المجال",
-            description2:"عدد سنوات الخبره",
-            description3: "",
+// JavaScript to create and toggle the display of more cards
+const cardContainer = document.getElementById("cardContainer");
+const showMoreButton = document.getElementById("showMoreButton");
+
+// Arrays of data for each card
+const names = [" فرح حميدي", " لمى الداود", " جمانة العشيوان", " الهنوف العريني ", "Investor 5", "Investor 6", "Investor 7", "Investor 8"];
+const investorTypes = ["الاسهوم", " عملات الرقمية", " العقار", "...", "...", ".. .", ".. .", "..."];
+const yearsOfExperience = [5, 8, 10, 3, 5, 8, 10, 3];
+const followerCount = [780,200,4247,900,671,543,12,19]
+
+// Array of image URLs
+const profilePictures = [
+    "url_to_pfp1.jpg",
+    "url_to_pfp2.jpg",
+    "url_to_pfp3.jpg",
+    "url_to_pfp4.jpg",
+    "url_to_pfp5.jpg",
+    "url_to_pfp6.jpg",
+    "url_to_pfp7.jpg",
+    "url_to_pfp8.jpg"
+];
+
+// Array of page URLs
+const pageUrls = [
+    "lamainvestor.html",
+    "farahinvestor.html",
+    "page3.html",
+    "page4.html",
+
+];
+
+// Function to create a card element with data from arrays
+function createCard(investorNumber) {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+        <img src="${profilePictures[investorNumber - 1]}" alt="${names[investorNumber - 1]}">
+        <h2>${names[investorNumber - 1]}</h2>
+        <p>المجال: ${investorTypes[investorNumber - 1]}</p>
+        <p>سنوات الخبرة: ${yearsOfExperience[investorNumber - 1]} سنوات</p>
+        <p>عدد المستفيدين: ${followerCount[investorNumber - 1]}</p>
+
+        <div class="star-rating">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+        </div>
+        <a href="${pageUrls[investorNumber - 1]}" class="read-more-button">تعرف اكثر</a>
+    `;
+    return card;
+}
+
+let nextInvestorNumber = 1; 
+const maxCards = 9; 
+// Function to check if the button should be hidden
+function checkButtonVisibility() {
+    if (nextInvestorNumber >= maxCards) {
+        showMoreButton.style.display = "none"; // Hide the button
+    }
+}
+
+// Add the initial four cards
+for (let i = 0; i < 4; i++) {
+    const card = createCard(nextInvestorNumber);
+    cardContainer.appendChild(card);
+    nextInvestorNumber++;
+}
+
+checkButtonVisibility();
+
+showMoreButton.addEventListener("click", () => {
+    for (let i = 0; i < 4; i++) {
+        if (nextInvestorNumber < maxCards) {
+            const card = createCard(nextInvestorNumber);
+            cardContainer.appendChild(card);
+            nextInvestorNumber++;
         }
-        
-    ];
-    // this element is a div created at the HTML file
-    const container = document.getElementById("experts-cards-container");
-    // "expertscards" is the name of the array and the function"expert" is applied on every element in the array
-    expertscards.forEach(expert => {
-        const cardsElement = document.createElement("div");
-        cardsElement.id= "contentcard"
-        cardsElement.classList.add("expert");
-
-        cardsElement.innerHTML = `
-        
-
-            <img src="${expert.imgurl}" alt="${expert.title}" class="img"><br><br>
-            
-               
-            
-            <h2 class="name">${expert.title}</h2>
-            <p class="experties">${expert.head}</p>
-            <li class="expertieslist">${expert.description1}</li>
-            <li class="expertieslist">${expert.description2}</li><br>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-
-             
-            <a href="" class="knowmore">تعرف اكثر</a> `;// ابغى هنا تكون البروفايل حقت الشخص 
-                                                        // صفحة البروفايل بتتغير كل مرة لصفحة ثانيه 
- 
-            
-        container.appendChild(cardsElement);
-    });
+    }
+    checkButtonVisibility(); // Check visibility after adding cards
 });
-
-
