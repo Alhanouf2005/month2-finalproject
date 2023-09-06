@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
       
           prevButton.addEventListener("click", function() {
               scrollContent.scrollBy({
-                  left: -100, // Adjust the scroll amount as needed
+                  left: -100, // scroll speed
                   behavior: "smooth"
               });
           });
       
           nextButton.addEventListener("click", function() {
               scrollContent.scrollBy({
-                  left: 100, // Adjust the scroll amount as needed
+                  left: 100, // scroll speed
                   behavior: "smooth"
               });
           });
