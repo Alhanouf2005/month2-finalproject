@@ -162,3 +162,44 @@ fetchAndUpdateData();
 
 // start of  websocket chatter
 let socket = new WebSocket("ws://javascript.info");
+
+// Initialize DatePicker
+const datePicker = new Datepicker(document.getElementById('datepicker'), {
+  format: 'dd/mm/yyyy HH:ii',
+  autoclose: true,
+  todayHighlight: true,
+});
+
+// Handle scheduling when the "Schedule" button is clicked
+document.getElementById('schedule-appointment').addEventListener('click', function () {
+  const selectedDate = datePicker.getDate();
+  
+  // You can send this selectedDate to your backend for further processing
+  // For now, we'll just display an alert with the selected date and time
+  alert('Appointment Scheduled\nDate and Time: ' + selectedDate);
+});
+
+
+
+
+function sendMessage() {
+  // Get the user's message from the input field
+  const messageInput = document.querySelector('.message-input');
+  const userMessage = messageInput.value;
+
+  if (userMessage.trim() === '') {
+    return; // Prevent sending empty messages
+  }
+
+  // Create a new list item to display the user's message
+  const messageList = document.getElementById('message-list');
+  const listItem = document.createElement('li');
+  listItem.textContent = userMessage;
+  listItem.classList.add('user-message'); // You can style user messages differently
+
+  // Append the new message to the message list
+  messageList.appendChild(listItem);
+
+  // Clear the input field after sending the message
+  messageInput.value = '';
+}

@@ -88,3 +88,19 @@ p {
           text-align: center;
 
 }
+
+.back-arrow {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(248,32,123); 
+	color: white;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	text-decoration: none;
+      }

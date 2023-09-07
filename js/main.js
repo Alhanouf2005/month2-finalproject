@@ -24,5 +24,5 @@ feedback.addEventListener('mouseenter', () => {
 });
 
 feedback.addEventListener('mouseleave', () => {
-    feedback.style.animation = 'scroll 100s linear infinite'; 
+    feedback.style.animation = 'scroll 20s linear infinite'; 
 });

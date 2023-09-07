@@ -5,27 +5,27 @@ const showMoreButton = document.getElementById("showMoreButton");
 // Arrays of data for each card
 const names = [" فرح حميدي", " لمى الداود", " جمانة العشيوان", " الهنوف العريني ", "Investor 5", "Investor 6", "Investor 7", "Investor 8"];
 const investorTypes = ["الاسهوم", " عملات الرقمية", " العقار", "...", "...", ".. .", ".. .", "..."];
-const yearsOfExperience = [5, 8, 10, 3, 5, 8, 10, 3];
-const followerCount = [780,200,4247,900,671,543,12,19]
+const yearsOfExperience = [5, 15, 10, 3, 5, 8, 10, 3];
+const followerCount = [780,951,4247,900,671,543,12,19]
 
 // Array of image URLs
 const profilePictures = [
     "url_to_pfp1.jpg",
-    "url_to_pfp2.jpg",
-    "url_to_pfp3.jpg",
-    "url_to_pfp4.jpg",
-    "url_to_pfp5.jpg",
-    "url_to_pfp6.jpg",
-    "url_to_pfp7.jpg",
-    "url_to_pfp8.jpg"
+    "../media/userimg2.png",
+    "../media/userimg2.png",
+    "../media/userimg2.png",
+    "../media/userimg2.png",
+    "../media/userimg2.png",
+    "../media/userimg2.png",
+    "../media/userimg2.png"
 ];
 
 // Array of page URLs
 const pageUrls = [
-    "lamainvestor.html",
     "farahinvestor.html",
-    "page3.html",
-    "page4.html",
+    "lamainvestor.html",
+    "alhanoufinvestor.html",
+    "jumanahinvestor.html",
 
 ];
 
@@ -34,7 +34,7 @@ function createCard(investorNumber) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-        <img src="${profilePictures[investorNumber - 1]}" alt="${names[investorNumber - 1]}">
+        <img src="${profilePictures[investorNumber - 1]}" alt="${names[investorNumber - 1]}" style="width: 70px; height: 70px;"> <!-- Adjust width and height here -->
         <h2>${names[investorNumber - 1]}</h2>
         <p>المجال: ${investorTypes[investorNumber - 1]}</p>
         <p>سنوات الخبرة: ${yearsOfExperience[investorNumber - 1]} سنوات</p>
@@ -50,6 +50,7 @@ function createCard(investorNumber) {
         <a href="${pageUrls[investorNumber - 1]}" class="read-more-button">تعرف اكثر</a>
     `;
     return card;
+
 }
 
 let nextInvestorNumber = 1; 

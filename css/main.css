@@ -34,7 +34,7 @@ body {
         .login-button {
             border-radius: 10px;
             width: 6rem;
-            margin-left: 50px;
+            margin-right: 40px;
         }
 
         .header-text {
@@ -206,12 +206,74 @@ body {
       }
 
         /* Footer  */
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+        *{
+          padding: 0;
+          margin: 0;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Golos+Text&family=Marhey:wght@500&display=swap');
+      body{
+          font-family: 'Marhey', cursive;
+      }
+      .footer{
+          background-color: #012258;
+          display: flex;
+          justify-content: space-around;
+          height: 250px;  
+      }
+      
+      .subscribe{
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          margin-left: 110px;
+          
+      }
+      .subscribe h2{
+          margin-bottom: 30px;
+          color: rgb(248,32,123);
+          font-size: 1.7rem;
+          
+      }
+      
+      .qoute{
+          margin-top: 50px;
+          color: rgb(248,32,123);
+          font-size: 1.2rem;
+          margin-left: 20px;
+      }
+      .list3{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: -50px;
+      }
+      .button2:hover{
+          transform: scale(1.04);
+          transition: .3s;
+
+      }
+      .footer-part{
+          margin-top: 50px;
+          display: flex;
+          
+      }
+      .footer-part ul{
+          margin-right: 40px;
+          list-style: none;
+      }
+      .footer-part ul li a{
+          color: whitesmoke;
+          font-size: 1rem;
+          text-decoration: none;
+      }
+      
+      
+      .footer-part li:hover {
+          transform: scale(1.03);
+          color: rgb(220, 220, 220);
+          transition: .2s;
+      }
 
 
 
@@ -219,14 +281,22 @@ body {
 
 .feedback {
   display: flex;
-  animation: scroll 30s linear infinite; 
+  animation: scroll 10s linear infinite; 
+  border: blue solid 2px;
+  width: 1600px;
 }
 
 .feedback-card {
-  width: 300px; 
-  height: 200px; 
+  width: 50vw; 
+  height: 220px; 
   background-color: #f0f0f0;
   margin-right: 10px; 
+  border: yellow solid 2px
+}
+.scroll-container{
+          width: 800px;
+          border: 2px red solid;
+          margin-right: 230px;
 }
 
 @keyframes scroll {
@@ -236,4 +306,8 @@ body {
   100% {
       transform: translateX(-100%);
   }
+}
+
+.pfp{
+
 }

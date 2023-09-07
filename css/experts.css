@@ -27,7 +27,7 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    height: 330px;
+    height: 370px;
     width: 470px;
 }
 
@@ -65,6 +65,7 @@
     background-color: rgb(197, 26, 97); 
  }
     
+
 
 #showMoreButton {
     clear: both;
@@ -134,4 +135,83 @@ nav {
 }
 
 
-  
+body{
+    font-family: 'Marhey', cursive;
+}
+.footer{
+    background-color: #012258;
+    display: flex;
+    justify-content: space-around;
+    height: 250px;  
+}
+
+.subscribe{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 110px;
+    
+}
+.subscribe h2{
+    margin-bottom: 30px;
+    color: rgb(248,32,123);
+    font-size: 1.7rem;
+    
+}
+
+.qoute{
+    margin-top: 50px;
+    color: rgb(248,32,123);
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+.list3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+.button2:hover{
+    transform: scale(1.04);
+    transition: .3s;
+
+}
+.footer-part{
+    margin-top: 50px;
+    display: flex;
+    
+}
+.footer-part ul{
+    margin-right: 40px;
+    list-style: none;
+}
+.footer-part ul li a{
+    color: whitesmoke;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+.footer-part li:hover {
+    transform: scale(1.03);
+    color: rgb(220, 220, 220);
+    transition: .2s;
+}
+
+.back-arrow {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(248,32,123); 
+	color: white;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	text-decoration: none;
+      }
+
