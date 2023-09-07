@@ -4,13 +4,13 @@ const showMoreButton = document.getElementById("showMoreButton");
 
 // Arrays of data for each card
 const names = [" فرح حميدي", " لمى الداود", " جمانة العشيوان", " الهنوف العريني ", "Investor 5", "Investor 6", "Investor 7", "Investor 8"];
-const investorTypes = ["الاسهوم", " عملات الرقمية", " العقار", "...", "...", ".. .", ".. .", "..."];
+const investorTypes = ["الاسهم", " عملات الرقمية", " العقار", "...", "...", ".. .", ".. .", "..."];
 const yearsOfExperience = [5, 15, 10, 3, 5, 8, 10, 3];
 const followerCount = [780,951,4247,900,671,543,12,19]
 
 // Array of image URLs
 const profilePictures = [
-    "url_to_pfp1.jpg",
+    "../media/userimg2.png",
     "../media/userimg2.png",
     "../media/userimg2.png",
     "../media/userimg2.png",
